@@ -4,7 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First assignment</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.HEAD{
+    display: block;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+   
+}
+
+.head1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 12rem;
+  padding-left: 12rem;
+  display: flex;
+  justify-content: center;
+}
+.head2 {
+  
+  font-size: 1.2rem;
+  font-weight: 250;
+  letter-spacing: 3px;
+  border-bottom: 5px dashed black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 12rem;
+  padding-left: 12rem;
+  display: flex;
+  justify-content: center;
+
+}
+.body{
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( 109.6deg,  rgba(103,30,117,1) 11.2%, rgba(252,76,2,1) 91.1% );
+    border: 5px soli white;
+    border-radius: 50px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    justify-content: space-between;
+
+
+}
+
+
+.box {
+    width: 100px;
+    height:100px;
+    display: flex;
+    border: 4px solid white;
+    border-bottom: hidden;
+    border-radius: 50%;
+    padding-left: 6rem;
+    padding-right: 7rem;
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+    margin:auto;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(33,33,33,.2); 
+    color: white;
+    font-size: 1.5rem ;
+
+  }
+
+ span{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color:white;
+ }
+ .link{
+     text-decoration: none;
+     font-size:0.8rem;
+     font-weight: 110;
+     color: blue;
+ }
+ a {
+  width: 100px;
+  height:100px;
+  position: absolute;
+  translate: -45% -20%;
+  border-radius: 50%;
+  padding-left: 6rem;
+  padding-right: 7rem;
+  padding-top: 1rem;
+color: blue;
+font-size: 1rem;
+font-weight: bold;
+text-decoration: underline;
+background-color: transparent;
+
+}
+.box:hover {
+  box-shadow: 10px 10px 100px 1px whitesmoke;
+  width: 110px;
+  height: 110px;
+   transition: transform 0.5s;
+}
+ #google{
+ background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyuqgfcYJEahKiEDoxCYl-9IQo73fM7CQ1Wg&usqp=CAU) ;
+ background-size: contain;
+background-repeat: no-repeat;
+background-position-y: 20px ;
+background-color: white;
+}
+#yahoo{
+  background-image:url(data:image/png;base64,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) ;
+  background-size: contain;
+ background-repeat: no-repeat;
+ background-position-y: 4px ;
+ background-position-x: 22px;
+ background-color: white;
+ margin-top: 2rem;
+ }
+ #cnn{
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAC/CAMAAAA1kLK0AAAA0lBMVEX///8AAADMAADJAAD56+vTRUUmJiY0NDTb29vDw8Onp6fNzc1UVFQUFBSzs7NKSkpeXl4AxZ719fV2dnZAQEDj4+NZWVnT09OFhYXcbW3npaWUlJR+fn4AwpjO7+XmnZ3z0NC5ubn99PTefHyenp7iioqMjIwfHx/339/u7u5lZWUvLy9tbW2CgoLvwMDVQ0POGRkQEBDss7P11tbRMzPQJyfed3fnoKDaYGDWUlLklZXOFRXQIyPst7fSMTHbZ2dm1Leu5tZU0bLs+fWE28So5NMnCQhTAAAF8UlEQVR4nO2aeV/iOByHf6WgBTwLWARnxMothwg6nji7s/v+39LmLD1SRmfX2tnP9/nDNOlh8jTNCREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWynahTdT+uzMfiQQoYAIBUQoIELxfhHlAPkEjx9WiVyRNuJJo+aRZVln8oIqT26oMEggamweJO+qjPlNXZ2zizMWHVdGuRWxsAIOXRbf40d1IkckMSM01eev+PWH/IgVb8DDsk4gOtg8x/KYniBSFS6DaDmvInZCBRiw+JFQEhLR3Zy/0qIqRLs87LOEExbux0U0QjGHXRS1lHsR1kFSxCh8vhITUU8TcRiKHUZkWru/g4h+UkQ1fL4eE2GliQjfZMlrAtwciziq9kUeJ0kRsoU4cHbV24yK8KIiBn3OtCFvbnptETrSS82R/6SRYxE1opooSFJEU73UslFENyqirrIhbx6ptsHRAf0OIkRBd1JEnLHuzyjiZJsIiorwPkeELRBhkKDCgjz6L0RYeRdhF3qdou/P7NXS79zylKeZuyyxs9f+8JS+2e8TMU0V4eRbhH0nozPbJ5/omaUMebzERFDxlFpvFzFVZUoRUdkiwv10EfY3opf5al66PaXl7T117MKK/FWJn94qop4UUVZlSRFxZBQhx1NngYi6vDRrEbw+lHqsJtDsjlrLyxe6tx+o02o9Us9OE8GnAqZxhCzTIE2EZRRB+rtRgew3y5nXCJ9KHaJhp/PIRHSowJKZiHN69qnwZBIxGTX2VQETQ2wxqbCa+j/ERbhHJhFyKLnQUUdJyw4uwr6kWY+KK95rXHIRrR71SlxE555uCiYRGjKIkN+GnDsZRJTHIRHWDkMMHS39cUjEU/ljMxUxo3ufVqJuCBH0XCRRI+hhSaV0EftBlsMiaKJevVlEMyIiuFKNzC9UvlwZ7WcrYkgr3X1IEZ0HWgoRxTUNaZhaI/pGEaoQVwYR7M/OxChCjlTl1JMTq1dZiZjTMCRiSQ/cxjk76N3QFhF8xJwUob/wWlJEc1OX4iLUgxd6ihWtV9mIEJ/G80ZEifwnIeKUNZZbRVhGEXoWfZEQUd4iQi1JjHXWrkQ0m0m4EtGjl3MaikG26DXWrNtsCRGvdHNpElGjhsxnQ86YYyJ0PR/FRejpdjD7PKvVahP11pUlvSTlLnSly0pEgb31ORtIzm5uWkMuYs7GlzYXcWcvaV3cMqBiIg5MIlTTWEuIOImKqEcy09a1TFLd2MxIBOs0/VVLpbRmTMQrvdwNuYg5LR/8V5MIN0VEuc0oq3ruxEV0zSJGfXZTX61TsTogoqN2YDMjEQWbNYmt9f0pZ8WbC1YT7ucdeuVnLtctekyKoBQRU3m+IqL9mAjXM4tQk65gHCUCb7OqlZUI3kwQ+UUOiQ5kzU4RyVEnO1glp+FpIvQ0XETbcRG0VYQct29EXKj/kZ2Igv10vvRl0uyaJ7BGYzjnB9cdKr4a1iN+JmJiFnG4VUQ1KuITF2bsxLrM5uB9IipmEd3ci/g57xNxYRbh/O9EeDERjbeJoF8Vcfw1jyLO9MiwoboHVw0CRlJEU503iNjbJsILi3DU/qIQ8f3LcR5F7E7Hliq4HFhdyfbe0jufjjtIEdENi1C0ZXXqBut8lqxmehVMeDj+UBP/cqdrEMw1LZV3VUMUiXGEeulxEZF9QmszZ5euif7gHo7/zK8IPhEIb1uWKbr36SVFkEmEmmEF9kJ7n43Aw/GX73kVIaaGoY3sPR5vb+J8wSkhwrD32VaNg2CHXzTQMT6D/SE9MBN/5UhE9NVxHJ3rIxkPTIiFt8jvI3gZxduOimAP8vTvLgZiLurWtSLuYcPf+RFhotrke7l6cYncdn+x6Ldlt+dVGQ0V8oSRPBCBQlx50D9cTJrB70K85nh/wD3Qj68hPkYDfkMVABEKiFAU7bez/uzMAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+HX+AaoAheux2EgFAAAAAElFTkSuQmCC) ;
+  background-size: contain;
+ background-repeat: no-repeat;
+ background-position-y: 2px ;
+ background-position-x: 39px;
+ background-color: white;
+ margin-top: 2rem;
+ }
+
+ .sec2{
+   display: flex;
+   position: relative;
+   width: 80%;
+   margin: auto;
+   justify-content: center;
+   margin: top 1.5rem;
+
+ }
+ .h1{
+  display: block;
+  position: absolute;
+  margin-top: 1.2rem;
+
+ }
+ table{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 3rem;
+  padding: 10px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ }
+
+  th td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+ }
+ tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.SEC3 {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16%;
+}
+.ulh1 {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: revert-layer;
+  letter-spacing: 2px;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  margin-top: -14%;
+}
+.sec4{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 2rem;
+  position: relative;
+  gap: 10px;
+}
+.sec4 h1{
+  text-decoration: underline;
+  font-weight: 500;
+ font-family:'Times New Roman', Times, serif;
+}
+.sec2{
+  margin-top: 4rem;
+}
+    </style>
 </head>
 <body>
       <header class="HEAD">
@@ -23,5 +229,84 @@
                   <button class="box" id="google"><a  href="http://google.com" target="_blank"></a>
                   <button class="box" id="yahoo"> <a href="http://yahoo.com" target="_blank"></a>
                  <button class="box" id="cnn"><a  href="http://cnn.com" target="_blank"> </a>
-</body>
+
+           </SEction>
+           <section class="sec4">
+                <h1>INFO ABOUT AMAZON</h1>
+                <h2>Amazon.com is an e-commerce platform that sells many product lines, including media (books, movies, music, and software), apparel, baby products, consumer electronics, beauty products,</h2>
+                <h3>Visits to amazon.com grew from 615 million annual visitors in 2008,</h3>
+                <h4>Amazon was founded by Jeff Bezos from his garage in Bellevue</h4>
+                <h5>Amazon went public in May 1997.</h5>
+                <h6>Amazon uses many different transportation services to deliver packages.</h6>
+
+           </section>
+           
+           <section class="sec2">
+                           <h1 class="h1">
+                            HTML TABLES
+                           </h1>
+                           
+                           <table>
+                            <tr>
+                              <th>EMPLOY ID</th>
+                              <th>NAME</th>
+                              <th>DEPARTMENT</th>
+                              <th>DESIGNATION</th>
+                            </tr>
+                            <tr>
+                              <td>A07B9SSD33578</td>
+                              <td>Maria Anders</td>
+                              <td>engineerEngineer</td>
+                              <td>software devoloper</td>
+                            </tr>
+                            <tr>
+                              <td>A07B9SSD33579</td>
+                              <td>Francisco Chang</td>
+                              <td>Engineer</td>
+                              <td>data analytics</td>
+                            </tr>
+                            <tr>
+                              <td>A07B9SSD33570</td>
+                              <td>Roland Mendel</td>
+                              <td>Engineer</td>
+                              <td> prompt engineer</td>
+                            </tr>
+                            <tr>
+                              <td>A07B9SSD33571</td>
+                              <td>Helen Bennett</td>
+                              <td>Engineer</td>
+                              <td> Data analytics</td>
+                            </tr>
+                            
+                          </table>
+                    
+                    </section>
+                             
+
+                    <section class="SEC3">
+                      <h1 class="ulh1">LIST OF COUNTRIES IN UNORDERED LIST</h1>
+                             <ul>
+                                <li>INDIA</li>
+                                <li>AUSTRALIA</li>
+                                <li>ENGLAND</li>
+                                <li>SOUTH AFRICA</li>
+                                <li>NEWZEALAND</li>
+                                <li>AFGANISTHAN</li>
+                                <li>SRILANKA</li>
+                                <li>BANGLADESH</li>
+                                <li>PAKISTHAN</li>
+                             </ul>
+                    </section>
+                   
+                    <section>
+                      <h2>Iframe - Target for a Link</h2>
+
+                      <iframe src="https://www.edureka.co/search?utm_source=Google-Search-Brand&utm_medium=cpc&utm_campaign=Brand:-Search:-IN:-Cust&gad_source=1&gclid=Cj0KCQiA4NWrBhD-ARIsAFCKwWsY_PWstjxD98xFz3kiCW81LHgy3D79r7g6KUs-AmOyTuZq2Yv34bkaAis4EALw_wcB" name="iframe_a" height="300px" width="80%" style="margin: auto;">
+
+                      </iframe>
+
+                      <footer>
+
+                      </footer>
+                    </section>
 </html>
